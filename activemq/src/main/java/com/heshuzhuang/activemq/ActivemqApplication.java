@@ -10,4 +10,6 @@ public class ActivemqApplication {
 		SpringApplication.run(ActivemqApplication.class, args);
 	}
 
+
+
 }
