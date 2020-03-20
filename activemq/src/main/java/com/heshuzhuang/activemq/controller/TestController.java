@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.jms.Queue;
 import javax.jms.Topic;
 
 /**
@@ -16,12 +17,18 @@ import javax.jms.Topic;
 @RequestMapping("/api/MQTest")
 public class TestController {
 
+	/**
+	 * 两种模式     消息队列   与    发布订阅
+	 */
+
 	@Autowired
 	private JmsMessagingTemplate jmsMessagingTemplate;
 
 	@Autowired
 	private Topic topic;
 
+	@Autowired
+	private Queue queue;
 
 
 	@RequestMapping(value = "/mq" ,method = RequestMethod.POST)
