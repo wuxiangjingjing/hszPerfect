@@ -17,6 +17,10 @@ public class ActivemqApplication {
 	}
 
 
+	/**
+	 * 写死了队列/订阅名称
+	 * @return
+	 */
 	@Bean
 	public Topic topic(){
 		return new ActiveMQTopic("Topic");
