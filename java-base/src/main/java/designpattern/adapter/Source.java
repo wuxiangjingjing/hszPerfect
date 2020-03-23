@@ -1,7 +1,7 @@
 package designpattern.adapter;
 
 /**
- * @author Rod
+ *
  */
 public class Source {
     public void method01() {

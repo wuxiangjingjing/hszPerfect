@@ -1,7 +1,7 @@
 package designpattern.adapter;
 
 /**
- * @author Rod
+ *
  */
 public class ClassAdapter extends Source implements Targetable {
     @Override

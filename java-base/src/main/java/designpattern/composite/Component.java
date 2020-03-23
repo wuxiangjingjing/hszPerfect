@@ -1,7 +1,7 @@
 package designpattern.composite;
 
 /**
- * @author Rod
+ *
  */
 public abstract class Component {
     private String name;

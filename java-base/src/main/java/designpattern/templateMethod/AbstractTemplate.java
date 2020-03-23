@@ -1,7 +1,7 @@
 package designpattern.templateMethod;
 
 /**
- * @author Rod
+ *
  */
 public abstract class AbstractTemplate {
 

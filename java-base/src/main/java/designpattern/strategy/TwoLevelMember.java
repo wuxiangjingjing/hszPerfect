@@ -1,7 +1,7 @@
 package designpattern.strategy;
 
 /**
- * @author Rod
+ *
  */
 public class TwoLevelMember implements MemberStartegy {
     @Override

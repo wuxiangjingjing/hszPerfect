@@ -1,7 +1,7 @@
 package designpattern.templateMethod;
 
 /**
- * @author Rod
+ *
  */
 public class ConcreteTemplate extends AbstractTemplate{
 

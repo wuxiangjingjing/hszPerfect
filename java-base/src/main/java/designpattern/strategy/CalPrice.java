@@ -1,8 +1,5 @@
 package designpattern.strategy;
 
-/**
- * @author Rod
- */
 public class CalPrice {
     private MemberStartegy startegy;
 

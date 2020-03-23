@@ -21,7 +21,7 @@ public class StrategyPattern {
 }
 
 /**
- * 定义一个接口
+ * 定义一个接口  会有不同的实现类，策略的选择  具体的接口实现
  */
 interface Heshuzhuang{
 	void sayHelloWorld();

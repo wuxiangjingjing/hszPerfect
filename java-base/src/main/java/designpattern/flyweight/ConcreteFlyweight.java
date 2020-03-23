@@ -1,7 +1,7 @@
 package designpattern.flyweight;
 
 /**
- * @author Rod
+ *
  */
 public class ConcreteFlyweight implements Flyweight {
 

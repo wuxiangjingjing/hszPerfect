@@ -1,7 +1,7 @@
 package designpattern.strategy;
 
 /**
- * @author Rod
+ *
  */
 public class NormalMember implements MemberStartegy{
     @Override
