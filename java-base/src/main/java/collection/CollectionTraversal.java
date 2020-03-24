@@ -14,12 +14,12 @@ public class CollectionTraversal {
 
 	public static void main(String[] args) {
 
-		// java 8 中的流式api
-		List ones = new ArrayList();
+		//
+		List<String> ones = new ArrayList();
 		ones.add("马");
 		ones.add("化");
 		ones.add("腾");
-		ones.stream().forEach(System.out::println);
+		ones.forEach(System.out::println);
 	}
 
 
