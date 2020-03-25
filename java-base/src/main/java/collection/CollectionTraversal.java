@@ -20,6 +20,8 @@ public class CollectionTraversal {
 		ones.add("化");
 		ones.add("腾");
 		ones.forEach(System.out::println);
+
+
 	}
 
 
