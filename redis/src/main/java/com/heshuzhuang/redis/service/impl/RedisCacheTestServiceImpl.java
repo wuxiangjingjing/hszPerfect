@@ -20,7 +20,7 @@ public class RedisCacheTestServiceImpl implements RedisCacheTestService {
 	 *  key 可以动态的设置为方法的   参数     ps: key="#参数"   or key = "#参数.属性"
 	 *  condition   为缓存的条件，当符合条件时才进行缓存
 	 *  unless 即条件不成立时缓存 ps:unless = "#result.code != 0",#result 代表返回值，意思是当返回码不等于 0 时不缓存，也就是等于 0 时才缓存
-	 *
+	 *  其他参数条件未使用
 	 * value 和 cacheNames 不可以同时设置
 	 * @return
 	 */
