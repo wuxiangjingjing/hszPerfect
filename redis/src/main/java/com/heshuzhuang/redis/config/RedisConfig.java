@@ -69,14 +69,15 @@ public class RedisConfig {
 	 */
 	@Bean
 	RedisMessageListenerContainer container(RedisConnectionFactory connectionFactory,
-	                                        MessageListenerAdapter listenerAdapter
+	                                        MessageListenerAdapter listenerAdapter,
+	                                        MessageListenerAdapter listeneAdapter
 	) {
 		RedisMessageListenerContainer container = new RedisMessageListenerContainer();
 		container.setConnectionFactory(connectionFactory);
 
 		//可以添加多个 messageListener
 		container.addMessageListener(listenerAdapter, new PatternTopic("index"));
-
+		container.addMessageListener(listeneAdapter, new PatternTopic("index"));
 		return container;
 	}
 
@@ -91,5 +92,17 @@ public class RedisConfig {
 		System.out.println("消息适配器进来了");
 		return new MessageListenerAdapter(redisReceiver, "receiveMessage");
 	}
+
+	/**
+	 * 客户端2
+	 * @param redisReceiver
+	 * @return
+	 */
+	@Bean
+	MessageListenerAdapter listeneAdapter(RedisReceiver redisReceiver) {
+		System.out.println("消息适配器进来了");
+		return new MessageListenerAdapter(redisReceiver, "receiveMessage2");
+	}
+
 
 }

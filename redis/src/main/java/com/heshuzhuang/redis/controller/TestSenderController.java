@@ -7,6 +7,9 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 /**
+ *
+ * 定时发送消息
+ *
  * @author heshuzhuang
  * @Date 2020/3/26 15:40
  */
