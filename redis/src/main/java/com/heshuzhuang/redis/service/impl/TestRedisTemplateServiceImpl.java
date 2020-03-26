@@ -38,6 +38,9 @@ public class TestRedisTemplateServiceImpl implements RedisTemplateService {
 		redisTemplate.opsForHash().put("1","23","3");
 		redisTemplate.opsForHash().put("1","26","3");
 
+		// 整个map的保存
+		redisTemplate.opsForHash().putAll("名称",new HashMap());
+
 		log.info("这是设呢么玩意" + redisTemplate.opsForHash().get("1","2"));
 
 	}

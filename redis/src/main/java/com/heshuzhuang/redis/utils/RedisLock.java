@@ -8,7 +8,7 @@ import org.springframework.util.StringUtils;
 
 
 /**
- * redis 分布式锁    一种实现的方式
+ * redis 分布式锁  copy 的 一种实现的方式，是否会产生死锁 未研究
  *
  * 同样的解决办法还可利用    数据库添加版本标识    在更新时 将标识做条件做唯一判断
  *
