@@ -3,12 +3,16 @@ package com.heshuzhuang.redis.config;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.heshuzhuang.redis.service.impl.RedisReceiver;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.listener.PatternTopic;
+import org.springframework.data.redis.listener.RedisMessageListenerContainer;
+import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 
 import java.net.UnknownHostException;
@@ -51,5 +55,41 @@ public class RedisConfig {
 	}
 
 
+
+
+	/**
+	 * 下面为订阅发布配置bean
+	 *
+	 * redis消息监听器容器
+	 * 可以添加多个监听不同话题的redis监听器，只需要把消息监听器和相应的消息订阅处理器绑定，该消息监听器
+	 * 通过反射技术调用消息订阅处理器的相关方法进行一些业务处理
+	 * @param connectionFactory
+	 * @param listenerAdapter
+	 * @return
+	 */
+	@Bean
+	RedisMessageListenerContainer container(RedisConnectionFactory connectionFactory,
+	                                        MessageListenerAdapter listenerAdapter
+	) {
+		RedisMessageListenerContainer container = new RedisMessageListenerContainer();
+		container.setConnectionFactory(connectionFactory);
+
+		//可以添加多个 messageListener
+		container.addMessageListener(listenerAdapter, new PatternTopic("index"));
+
+		return container;
+	}
+
+
+	/**
+	 * 消息监听器适配器，绑定消息处理器，利用反射技术调用消息处理器的业务方法
+	 * @param redisReceiver
+	 * @return
+	 */
+	@Bean
+	MessageListenerAdapter listenerAdapter(RedisReceiver redisReceiver) {
+		System.out.println("消息适配器进来了");
+		return new MessageListenerAdapter(redisReceiver, "receiveMessage");
+	}
 
 }
