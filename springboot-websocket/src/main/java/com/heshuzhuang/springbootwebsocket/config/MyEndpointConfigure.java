@@ -9,6 +9,11 @@ import javax.websocket.server.ServerEndpointConfig;
 /**
  * 博客地址：https://blog.csdn.net/qq_35387940/article/details/93483678
  *
+ * ApplicationContextAware
+ * 当一个类实现了这个接口（ApplicationContextAware）之后，这个类就可以方便获得ApplicationContext中的所有bean。
+ * 换句话说，就是这个类可以直接获取spring配置文件中，所有有引用到的bean对象
+ *
+ *
  *
  * @Author：JCccc
  * @Description：
