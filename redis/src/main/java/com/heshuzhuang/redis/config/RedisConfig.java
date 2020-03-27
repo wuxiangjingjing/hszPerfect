@@ -89,7 +89,7 @@ public class RedisConfig {
 	 */
 	@Bean
 	MessageListenerAdapter listenerAdapter(RedisReceiver redisReceiver) {
-		System.out.println("消息适配器进来了");
+		System.out.println("A消息适配器进来了");
 		return new MessageListenerAdapter(redisReceiver, "receiveMessage");
 	}
 
@@ -100,7 +100,7 @@ public class RedisConfig {
 	 */
 	@Bean
 	MessageListenerAdapter listeneAdapter(RedisReceiver redisReceiver) {
-		System.out.println("消息适配器进来了");
+		System.out.println("B消息适配器进来了");
 		return new MessageListenerAdapter(redisReceiver, "receiveMessage2");
 	}
 
