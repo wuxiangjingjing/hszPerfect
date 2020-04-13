@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 
 /**
- * // todo 待完善rabbitmq
+ *
  * 切面编程记录访web的日志文件等信息，好像切入的位置不准确可能导致  错误
  *
  *
@@ -34,6 +34,7 @@ public class WebLogAcpect {
 	 */
 	@Pointcut("execution(public * com.heshuzhuang.rabbitmqdemo.controller..*.*(..))")
 	public void webLog(){}
+
 
 	/**
 	 * 前置通知：在连接点之前执行的通知
