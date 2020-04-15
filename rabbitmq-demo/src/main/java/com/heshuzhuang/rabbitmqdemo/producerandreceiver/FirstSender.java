@@ -1,7 +1,6 @@
 package com.heshuzhuang.rabbitmqdemo.producerandreceiver;
 
 
-import com.heshuzhuang.rabbitmqdemo.config.RabbitmqConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -32,7 +31,10 @@ public class FirstSender {
          * RabbitMqConfig.EXCHANGE  指定消息交换机
          * RabbitMqConfig.ROUTINGKEY2  指定队列key2
          */
-        rabbitTemplate.convertAndSend(RabbitmqConfig.EXCHANGE, RabbitmqConfig.ROUTINGKEY1,
-                message, correlationId);
+//        rabbitTemplate.convertAndSend(RabbitmqConfig.EXCHANGE, RabbitmqConfig.ROUTINGKEY1,
+//                message, correlationId);
+
+//        TODO 测试topic 消息
+        rabbitTemplate.convertAndSend("topicExchange", "queue_one_key.heshuzhuang",message, correlationId);
     }
 }

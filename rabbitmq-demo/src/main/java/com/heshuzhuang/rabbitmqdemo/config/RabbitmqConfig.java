@@ -36,6 +36,11 @@ public class RabbitmqConfig {
     /** 队列key2*/
     public static final String ROUTINGKEY2 = "queue_one_key2";
 
+    /** TOPIC队列key1*/
+    public static final String TOPIC_ROUTINGKEY1 = "queue_one_key.*";
+    /** TOPIC队列key2*/
+    public static final String TOPIC_ROUTINGKEY2 = "#";
+
     @Autowired
     private QueueConfig queueConfig;
     @Autowired
@@ -47,12 +52,30 @@ public class RabbitmqConfig {
     @Autowired
     private ConnectionFactory connectionFactory;
 
+//    todo 绑定指定队列的消息推送
+//    /**
+//     * 将消息队列1和交换机进行绑定,指定队列key1
+//     */
+//    @Bean
+//    public Binding binding_one() {
+//        return BindingBuilder.bind(queueConfig.firstQueue()).to(exchangeConfig.directExchange()).with(RabbitmqConfig.ROUTINGKEY1);
+//    }
+//
+//    /**
+//     * 将消息队列2和交换机进行绑定,指定队列key2
+//     */
+//    @Bean
+//    public Binding binding_two() {
+//        return BindingBuilder.bind(queueConfig.secondQueue()).to(exchangeConfig.directExchange()).with(RabbitmqConfig.ROUTINGKEY2);
+//    }
+
+
     /**
      * 将消息队列1和交换机进行绑定,指定队列key1
      */
     @Bean
     public Binding binding_one() {
-        return BindingBuilder.bind(queueConfig.firstQueue()).to(exchangeConfig.directExchange()).with(RabbitmqConfig.ROUTINGKEY1);
+        return BindingBuilder.bind(queueConfig.firstQueue()).to(exchangeConfig.topicExchange()).with(RabbitmqConfig.TOPIC_ROUTINGKEY1);
     }
 
     /**
@@ -60,7 +83,7 @@ public class RabbitmqConfig {
      */
     @Bean
     public Binding binding_two() {
-        return BindingBuilder.bind(queueConfig.secondQueue()).to(exchangeConfig.directExchange()).with(RabbitmqConfig.ROUTINGKEY2);
+        return BindingBuilder.bind(queueConfig.secondQueue()).to(exchangeConfig.topicExchange()).with(RabbitmqConfig.TOPIC_ROUTINGKEY2);
     }
 
     /**

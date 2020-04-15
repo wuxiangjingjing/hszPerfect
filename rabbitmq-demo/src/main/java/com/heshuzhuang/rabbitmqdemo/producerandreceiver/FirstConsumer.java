@@ -22,4 +22,16 @@ public class FirstConsumer {
         // 处理消息
         System.out.println("FirstConsumer {} handleMessage :"+message);
     }
+
+    /**
+     * 测试topic订阅是否成功
+     * @param message
+     */
+    @RabbitListener(queues = {"second-queue"})
+    public void handleMessag(Message message){
+        // 处理消息
+        System.out.println("SecondConsumer {} handleMessage :"+message);
+    }
+
+
 }

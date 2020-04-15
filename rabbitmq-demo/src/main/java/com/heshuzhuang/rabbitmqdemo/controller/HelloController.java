@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date 2019/10/12 14:27
  */
 @RestController("/api/hsz")
+@Deprecated
 public class HelloController {
 
 
