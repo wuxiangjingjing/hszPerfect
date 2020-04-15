@@ -22,6 +22,8 @@ public class ExchangeConfig {
      *     fanout交换器中没有路由键的概念，他会把消息发送到所有绑定在此交换器上面的队列中。
      *     topic交换器你采用模糊匹配路由键的原则进行转发消息到队列中 在topic中  可对key进行特殊类似模糊匹配的功能来实现，ps: aaa.*  匹配  aaa.ha
      *                                                                                                                 aaa.#  匹配  aaa.sss.sa
+     *
+     *   在取消匹配测试时发现队列2 还是能接受消息  需要查看已经绑定的队列是否存在相同名称的两个，且匹配规则不一致
      */
     @Bean
     public DirectExchange directExchange(){
