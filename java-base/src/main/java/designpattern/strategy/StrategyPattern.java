@@ -2,6 +2,7 @@ package designpattern.strategy;
 
 /**
  *
+ * 接口的不同实现类的选择   添加配置类  结合构造方法动态的选择执行类
  * 策略模式   小demo
  * @author heshuzhuang
  * @Date 2020/3/23 13:52

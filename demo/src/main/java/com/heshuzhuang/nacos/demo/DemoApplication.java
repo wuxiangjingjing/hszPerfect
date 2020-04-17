@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
+
+/**
+ * nacos   小demo 仅仅是测试读取配置文件
+ */
 @SpringBootApplication
 @NacosPropertySource(dataId = "hsz.test", autoRefreshed = true)
 @RestController
@@ -20,6 +24,7 @@ public class DemoApplication {
 	}
 
 
+    //   复制初始化为1   service.name
 	@NacosValue(value = "${service.name:1}", autoRefreshed = true)
 	private String serverName;
 

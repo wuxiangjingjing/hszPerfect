@@ -18,6 +18,12 @@ import javax.jms.Topic;
 public class TestController {
 
 	/**
+	 * 消息队列的官方文档
+	 * RocketMQ 官方文档： https://rocketmq.apache.org/docs/quick-start/RocketMQ
+	 * 中国开发者中心：http://rocketmq.cloud/zh-cn/
+	 * Kafka 官方文档： http://kafka.apache.org/documentation/
+	 * RabbitMQ官方文档： https://www.rabbitmq.com/documentation.html
+	 *
 	 * 两种模式     消息队列   与    发布订阅
 	 */
 
