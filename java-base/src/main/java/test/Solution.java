@@ -19,7 +19,23 @@ public class Solution {
 		List<List<Integer>> lists = new ArrayList<>();
 		List<Integer> listInteger = new ArrayList<>();
 		int[] sortedNums = Arrays.stream(nums).sorted().toArray();
-		int sumThree = sortedNums[0]+sortedNums[1]+sortedNums[2];
+		int length = sortedNums.length/2;
+		System.out.println("中间下标" + length);
+		if (sortedNums.length%2!=0){
+
+
+
+		} else {
+
+		}
+
+
+
+
+
+		//元素生成四位数组且不重复
+
+
 
 
 		Arrays.stream(sortedNums).forEach(System.out::println);
