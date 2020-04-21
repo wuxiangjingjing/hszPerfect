@@ -13,7 +13,7 @@ import java.nio.channels.FileChannel;
 public class NioChannel {
 
 	public static void main(String[] args) throws IOException {
-		RandomAccessFile aFile = new RandomAccessFile("F:\\project2\\learning\\java-base\\src\\main\\java\\nio\\nio.doc", "rw");
+		RandomAccessFile aFile = new RandomAccessFile("F:\\project2\\learning\\java-base\\src\\main\\java\\nio\\txt\\nio.doc", "rw");
 		FileChannel inChannel = aFile.getChannel();
 
 		ByteBuffer buf = ByteBuffer.allocate(2048);
