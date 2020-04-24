@@ -25,11 +25,11 @@ public class ConsumerController {
 	@Reference
 	private IProviderService providerService;
 
-	@Reference
+	@Reference(group = "test01")
 	private ICeshi ceshi1;
-//	@Reference
-//	@Qualifier("ceshi2")
-//	private ICeshi ceshi12;
+
+	@Reference(group = "test02")
+	private ICeshi ceshi12;
 
 
 
@@ -43,13 +43,15 @@ public class ConsumerController {
 
 	/**
 	 * 不同情况的调用
+	 * 对于同一个接口有不同的实现类的处理，相较于spring来说可以使用注解@Service("服务名称") 结合注解@qualifier("服务名称")
+	 * 相较于dubbo,可以对于service 配置不同的group,无论是对于xml 或者是注解配置（此处是注解配置，亲测）
+	 *
 	 * @param i
 	 * @return
 	 */
 	@RequestMapping(value = "/ceshi",method = RequestMethod.GET)
 	public String getResult(Integer i) {
-		log.info("获取的i值是" +  i);
-		// 远程调用
+		ceshi12.ceshi();
 		return ceshi1.ceshi();
 	}
 

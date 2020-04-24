@@ -1,0 +1,24 @@
+来源：https://juejin.im/post/5a619f886fb9a01c9f5b7e4f
+1.四种元注解：
+@Target               用于描述注解的使用范围,有一个枚举ElementType来指定,具体如下（偏重）
+@Retention            表示需要在什么级别保存该注释信息，用于描述注解的生命周期,
+@Documented           如果用javadoc生成文档时，想把注解也生成文档，就带这个
+@Inherited            @Inherited阐述了某个被标注的类型是被继承的
+
+自定义注解demo:
+
+@Target(ElementType.FIELD)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface Dog {
+    public String dog() default "";
+}
+
+
+我在使用的时候可以这样使用,@Dog(dog="小黄"),还可以直接这样使用@Dog,不指定dog属性，默认就是""
+
+
+
+
+
+
