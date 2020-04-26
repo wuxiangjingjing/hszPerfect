@@ -1,7 +1,10 @@
 package designpattern.adapter;
 
 /**
+ * Demo class
  *
+ * @author heshuhzuang
+ * @date 2016/10/31
  */
 public class ClassAdapter extends Source implements Targetable {
     @Override
