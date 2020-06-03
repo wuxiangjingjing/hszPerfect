@@ -15,5 +15,15 @@
     <modules>
         <module>demo</module>
         <module>java-base</module>
+        <module>nacos-springcloud-consumer</module>
+        <module>nacos-springcloud-provider</module>
+        <module>rabbitmq-demo</module>
+        <module>springboot-dubbo-nacos-base</module>
+        <module>springboot-dubbo-nacos-consumer</module>
+        <module>springboot-dubbo-nacos-provider</module>
+        <module>springboot_rocketmq</module>
+        <module>springboot-websocket</module>
+        <module>activemq</module>
+        <module>redis</module>
     </modules>
 </project>

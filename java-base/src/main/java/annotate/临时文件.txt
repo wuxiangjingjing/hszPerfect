@@ -20,4 +20,56 @@
 12.常见的垃圾回收算法 （标记-清除 标记-复制 标记-整理）冷
 13.mybatis与 hibernate 各自的有点与区别
 14.java 反射机制
-15.
+15.java的类加载机制
+
+2018.6~2019.2
+无锡雅座在线科技
+项目经历：餐饮会员营销系统、灵动工单(公司内部工单系统开发，基于钉钉)
+技术栈：springboot、springcloud、mybatis、redis。注册中心 eureka 数据库 mysql
+项目经验： 餐饮会员营销系统中，我参与的模块是会员卡资产模块，完成相关卡资产的api开发与对接。
+灵动工单项目是全程参与，其中学习了vue，因为是简单的后台管理页面，结合了ElementUI与mintUI，全部由我们开发完成。
+流程大致为客服下工单流转至相关工单技术处理群组，技术认领工单并需要在一定时间内完成，并且有钉钉时间预警，超时则发消息提醒相关负责人。
+
+2019.3~至今
+苏州海管家物流科技
+项目经历：太仓港无纸化项目
+技术栈：spring、springboot、dubbo、mybatis、redis 注册中心 zookeeper 数据库 mysql 接口文档 swagger （前）
+        springboot、springcolud、mybatis、redis 注册中心 nacos 数据库 mysql 接口文档 swagger （后）
+中间件：activceMQ、rocketMQ、nginx
+项目经验：将传统的纸质设备交接单用系统代替，让数据可视化。其中包括多重角色，包括车队、司机、码头、堆场等，他们之间数据相互流转。
+通过对项目的重构，对相关技术框架有了更深刻的学习与认知。知道的面也变的更广一些。规范自己的代码编写，养成良好的编码习惯。学习相关的优化以及
+加强自己处理问题的能力。
+
+1.熟练使用开发工具idea,构建工具maven,版本管理工具git,熟悉java 开发语言
+2.熟悉java主流框架spring,springboot ,springcloud等
+3.了解mysql、redis数据库，熟悉一些基本的sql优化
+4.对设计模式有初步的学习
+5.使用过activeMq,rabbitMq，rocketmq等消息中间件
+6.了解基础的linux操作命令
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+之前的springcloud 技术栈流程    consumer 中注入feign，调用feign方法，client中书写feign接口与vo/bo类，
+service中细分为client、biz、数据源配置、mapper数据交互。其中client实现feign接口，并注入biz,biz的实现类来实现具体的业务逻辑

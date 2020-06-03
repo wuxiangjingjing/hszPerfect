@@ -1,7 +1,8 @@
 package test;
 
+import lombok.Data;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -11,34 +12,25 @@ import java.util.List;
 public class Solution {
 
 	public static void main(String[] args) {
-		int[] nums = new int[]{1, 0, -1, 0, -2, 2};
-		fourSum(nums,0);
-	}
-
-	public static List<List<Integer>> fourSum(int[] nums, int target) {
-		List<List<Integer>> lists = new ArrayList<>();
-		List<Integer> listInteger = new ArrayList<>();
-		int[] sortedNums = Arrays.stream(nums).sorted().toArray();
-		int length = sortedNums.length/2;
-		System.out.println("中间下标" + length);
-		if (sortedNums.length%2!=0){
-
-
-
-		} else {
-
+		List<A> aList  = new ArrayList<>();
+		for (int t = 4;t>0;t--){
+			int i =0 ;
+			A a = new A();
+			a.setAge(11);
+			a.setName("dsdsdsd" + i++ );
+			aList.add(a);
 		}
 
 
-
-
-
-		//元素生成四位数组且不重复
-
-
-
-
-		Arrays.stream(sortedNums).forEach(System.out::println);
-		return lists;
 	}
+
+
+
+}
+@Data
+class  A {
+	private Integer age;
+
+	private String name;
+
 }

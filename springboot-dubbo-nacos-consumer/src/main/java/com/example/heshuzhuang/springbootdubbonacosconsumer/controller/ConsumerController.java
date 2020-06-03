@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
+ * 基于注解式的dubbo服务调用
  * @author heshuzhuang
  * @Date 2020/3/5 10:09
  */

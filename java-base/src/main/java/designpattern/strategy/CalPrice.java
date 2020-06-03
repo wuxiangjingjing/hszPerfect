@@ -1,6 +1,8 @@
 package designpattern.strategy;
 
+
 public class CalPrice {
+
     private MemberStartegy startegy;
 
     public CalPrice(MemberStartegy startegy) {
